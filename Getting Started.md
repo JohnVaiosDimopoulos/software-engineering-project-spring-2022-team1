@@ -1,3 +1,12 @@
+#Get Started Quickly by following these steps:
+
+1) Select (cd) "parent-app folder"
+2) Run `npm i`
+3) Run `npm start`
+4) Browser will pop up automatically but if not browse to http://localhost:3000 .
+
+#For more info continue reading
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
