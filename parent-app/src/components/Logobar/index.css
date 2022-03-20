@@ -8,7 +8,6 @@
   margin-right:10px;
   width:200px;
   height:40px;
-  color:white;
   background-color:rgb(200, 100, 140);
 }
 
@@ -19,14 +18,10 @@
   text-align:right;
 }
 
-#button {
+#login {
   margin:auto;
   padding-left:20px;
   padding-right:10px;
 }
 
-#a {
-  color:white;
-  text-decoration:none;
-}
 

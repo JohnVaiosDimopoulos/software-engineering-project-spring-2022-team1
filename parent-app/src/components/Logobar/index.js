@@ -25,7 +25,7 @@ export default function Logobar() {
             <Dropdown.Item>English</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        <div id="button">
+        <div id="login">
           {
             token && ( <LogoutBut/>)
           }
