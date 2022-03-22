@@ -1,7 +1,6 @@
 import './index.css';
 import { Navbar, Dropdown } from 'react-bootstrap'
 import {getToken} from '../../utils/Common'
-import SearchInput from '../SearchInput/index'
 import LoginBut from '../Buttons/LoginBut'
 import LogoutBut from '../Buttons/LogoutBut'
 
@@ -15,7 +14,6 @@ export default function Logobar() {
         <a href="/" id="a"><h2>e - Parent </h2></a>
       </div>
       <div className="group">
-        <SearchInput />
         <Dropdown>
           <Dropdown.Toggle variant="secondary" id="dropdown-basic">
           Language

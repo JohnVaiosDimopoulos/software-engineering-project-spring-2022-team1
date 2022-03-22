@@ -1,3 +1,20 @@
-#search {
+#search{
+  margin:auto;
+  padding-left:20px;
   padding-right:20px;
 }
+
+.search-box {
+  width:60%;
+  height:45px;
+  border-radius:25px;
+  border:1px #ddd solid;
+}
+
+.search-submit {
+  height:45px;
+  width:45px;
+  border-radius:30px;
+  background:#def;
+}
+

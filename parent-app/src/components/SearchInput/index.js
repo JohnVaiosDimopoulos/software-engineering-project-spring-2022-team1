@@ -1,10 +1,10 @@
 import './index.css'
-import { Form } from 'react-bootstrap'
 
 export default function SearchInput() {
   return (
-    <Form id="search">
-      <Form.Control type="search" placeholder="Αναζήτηση..." />
-    </Form>
+    <form id="search">
+      <input type="text" name="search" class="search-box" placeholder="Αναζήτησε την δραστηριότητα που θες πχ. Κολυμβητήριο, Γυμναστήριο, Παιδότοποι" />
+      <input type="submit" class="search-submit" value="Src" />
+    </form>
   );
 }

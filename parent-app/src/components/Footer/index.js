@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.css";
 
 export default function Footer() {
@@ -10,12 +9,12 @@ export default function Footer() {
         <br/><br/>Τηλέφωνο:
       </div>
       <div className='column'>
-        <b>Ενημέρωση</b><br />
-        <a href="/">Συχνές Ερωτήσεις</a><br />
-        <a href="/">Φόρμα επικοινωνίας - Σχολίων -<br /> Υποδείξεων</a>
+        <b>Η Εταιρία</b><br />
+        <a href="/">Λίγα λόγια για εμάς</a><br />
+        <a href="/">Συνεργάτες</a>
       </div>
       <div className='column'>
-        <b>Όροι & Ιδιωτικότητα</b><br />
+        <b>Συχνές Ερωτήσεις</b><br />
         <a href="/">Όροι Χρήσης - Δήλωση Απορρήτου<br /></a><br />
         <a href="/">Πολιτική  Cookies</a>
       </div>
