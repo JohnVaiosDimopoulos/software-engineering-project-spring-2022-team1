@@ -1,35 +1,25 @@
-import './index.css';
-import { Navbar, Dropdown } from 'react-bootstrap'
-import {getToken} from '../../utils/Common'
-import LoginBut from '../Buttons/LoginBut'
-import LogoutBut from '../Buttons/LogoutBut'
+import { Navbar } from 'react-bootstrap'
 
 export default function Logobar() {
 
-  const token = getToken()
-
   return (
-    <Navbar className='logobar'>
-      <div className="logo">
-        <a href="/" id="a"><h2>e - Parent </h2></a>
+    <Navbar class="bg-logobar p-2 h-15 flex">
+      <div class="h-12 p-1 bg-gray-100 rounded-full">
+        <a class="no-underline text-gray-700" href="/" id="a"><h2>Logo</h2></a>
       </div>
-      <div className="group">
-        <Dropdown>
-          <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-          Language
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item>Greek</Dropdown.Item>
-            <Dropdown.Item>English</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <div id="login">
-          {
-            token && ( <LogoutBut/>)
-          }
-          {
-            !token && ( <LoginBut/> )
-          }
+      <div class='px-4 py-1'>
+        <input class='h-10 px-2 rounded-full' type="text" placeholder="Αναζητήστε κάποια δραστηριότητα.."></input>
+      </div>
+      <div class="text-gray-700 py-2 right-10 absolute flex">
+        <div class='px-1'>
+          <button class='bg-gray-100 h-8 w-20 rounded-full' onclick="window.location.href = '/'">
+            Είσοδος
+          </button>
+        </div>
+        <div class='px-1'>
+          <button class='bg-gray-100 h-8 w-20 rounded-full' onclick="window.location.href = '/'">
+            Εγγραφή
+          </button>
         </div>
       </div>
     </Navbar>
