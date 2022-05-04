@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'logobar': '#83CBD2',
         'cyan': '#D1E8E8',
+        'button': '#83CBD2',
         'footer': '#CCE8E8'
       }
     }

@@ -1,5 +1,5 @@
 import { Carousel } from 'react-bootstrap'
-import Card from '../Card/index.js'
+import Card from '../Card'
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div class='pt-20'>
+      <div class='mt-20'>
         <h2>Κατηγορίες</h2>
       </div>
       <div class='bg-cyan p-24 place-content-center flex'>
@@ -50,7 +50,7 @@ export default function Home() {
           <h5>Χόμπι</h5>
         </div>
       </div>
-      <div class='pt-20'>
+      <div class='mt-20'>
         <h2>Δημοφιλέστερα</h2>
       </div>
       <div class='bg-cyan rounded-3xl mx-auto w-11/12 h-96 p-8 place-content-center flex'>
@@ -58,7 +58,7 @@ export default function Home() {
         <Card />
         <Card />
       </div>
-      <div class='mx-auto pt-40 flex'>
+      <div class='mx-auto mt-40 flex'>
         <img class='w-60 h-80 rounded-3xl' src='' alt='' />
         <div class=''>
           <h2>Γίνε τώρα συνεργάτης</h2>
@@ -68,7 +68,6 @@ export default function Home() {
             <input type='button' class='bg-gray-100 h-8 w-72 rounded-full' value='Γίνε συνεργάτης' />
           </form>
         </div>
-        
       </div>
     </div>
   );

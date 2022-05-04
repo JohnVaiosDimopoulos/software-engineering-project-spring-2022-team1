@@ -12,11 +12,11 @@ export default function Logobar() {
           <input type='text' class='h-10 w-96 px-2 rounded-full' placeholder="Αναζητήστε κάποια δραστηριότητα.."></input>
         </div>
         <div class='text-gray-700 py-2 right-10 absolute flex'>
-          <form class='px-1' action='/'>
-            <input type='button' class='bg-gray-100 h-8 w-20 rounded-full' value='Είσοδος' />
+          <form class='px-1' action='/login'>
+            <input type='submit' class='bg-gray-100 h-8 w-20 rounded-full' value='Είσοδος' />
           </form>
-          <form class='px-1' action='/'>
-            <input type='button' class='bg-gray-100 h-8 w-20 rounded-full' value='Εγγραφή' />
+          <form class='px-1' action='/register'>
+            <input type='submit' class='bg-gray-100 h-8 w-20 rounded-full' value='Εγγραφή' />
           </form>
         </div>
       </Navbar>
