@@ -58,6 +58,18 @@ export default function Home() {
         <Card />
         <Card />
       </div>
+      <div class='mx-auto pt-40 flex'>
+        <img class='w-60 h-80 rounded-3xl' src='' alt='' />
+        <div class=''>
+          <h2>Γίνε τώρα συνεργάτης</h2>
+            Ανέβασε και διαφήμισε τώρα τις υπηρεσίες που προσφέρεις μέσω του νέου αυτού ιστότοπου<br/>
+            Επέλεξε από τα πολλά πλάνα συνδρομής και ανέβασε την επιχείρηση σου σε άλλο επίπεδο.
+          <form class='px-1 pt-8' action='/'>
+            <input type='button' class='bg-gray-100 h-8 w-72 rounded-full' value='Γίνε συνεργάτης' />
+          </form>
+        </div>
+        
+      </div>
     </div>
   );
 }
