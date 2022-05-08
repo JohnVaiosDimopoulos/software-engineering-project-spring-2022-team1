@@ -1,5 +1,7 @@
 import { Carousel } from 'react-bootstrap'
 import Card from '../Card'
+import Login from '../Login'
+import UserProfile from '../UserProfile'
 
 export default function Home() {
   return (
@@ -19,7 +21,7 @@ export default function Home() {
       <div class='mt-20'>
         <h2>Κατηγορίες</h2>
       </div>
-      <div class='bg-cyan p-24 place-content-center flex'>
+      <div class='bg-cyan p-24 flex place-content-center'>
         <div class='relative bottom-16'>
           <div class='bg-blue-100 py-12 w-32 h-32 rounded-full shadow-lg'>
             -image-
