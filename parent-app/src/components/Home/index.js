@@ -1,7 +1,5 @@
 import { Carousel } from 'react-bootstrap'
 import Card from '../Card'
-import Login from '../Login'
-import UserProfile from '../UserProfile'
 
 export default function Home() {
   return (
@@ -60,9 +58,9 @@ export default function Home() {
         <Card />
         <Card />
       </div>
-      <div class='mx-auto mt-40 flex'>
+      <div class='mt-40 ml-10 flex'>
         <img class='w-60 h-80 rounded-3xl' src='' alt='' />
-        <div class=''>
+        <div class='ml-2'>
           <h2>Γίνε τώρα συνεργάτης</h2>
             Ανέβασε και διαφήμισε τώρα τις υπηρεσίες που προσφέρεις μέσω του νέου αυτού ιστότοπου<br/>
             Επέλεξε από τα πολλά πλάνα συνδρομής και ανέβασε την επιχείρηση σου σε άλλο επίπεδο.
