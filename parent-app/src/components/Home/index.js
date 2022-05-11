@@ -7,7 +7,7 @@ export default function Home() {
       <div class='bg-cyan rounded-3xl w-11/12 h-96 p-32 mx-auto'>
         <Carousel>
           <Carousel.Item>
-            <h1>Καλωσήρθατε στο e-Parent</h1>
+            <h1>Καλωσορίσατε στο e-Parent</h1>
             <p>Το νέο site για γρήγορη εύρεση δραστηριοτήτων στην γειτονιά σου!</p>
           </Carousel.Item>
           <Carousel.Item class='text-center'>
