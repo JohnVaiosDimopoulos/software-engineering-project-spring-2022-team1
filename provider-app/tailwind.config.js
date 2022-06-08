@@ -11,6 +11,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'background': '#F1FCFC',
         'logobar': '#83CBD2',
         'cyan': '#D1E8E8',
         'button': '#83CBD2',
