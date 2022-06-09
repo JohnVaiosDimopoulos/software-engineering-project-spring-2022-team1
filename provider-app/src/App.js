@@ -1,18 +1,17 @@
-import { Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import './App.css';
 import React from 'react';
 import ActionBar from './components/ActionBar.js';
 import ActivityPage from './components/ActivityPage.js';
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
-    <React.Fragment>
-      <div class='flex'>
+      <div class='flex text-center'>
         <ActionBar />
-        <ActivityPage />
+        <HomePage />
       </div>
-    </React.Fragment>
   )
 }
 

@@ -14,6 +14,7 @@ module.exports = {
         'background': '#F1FCFC',
         'logobar': '#83CBD2',
         'cyan': '#D1E8E8',
+        'hover': '#DBF4F4',
         'button': '#83CBD2',
         'footer': '#CCE8E8'
       }
