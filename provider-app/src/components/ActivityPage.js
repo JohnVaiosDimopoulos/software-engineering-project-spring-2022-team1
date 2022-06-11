@@ -1,3 +1,5 @@
+import ListItemDates from "./ListItemDates.js";
+
 export default function ActivityPage() {
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden'>
@@ -33,10 +35,19 @@ export default function ActivityPage() {
 
       <div class='mt-10 text-xl text-center'>Ημερομηνίες Διεξαγωγής:</div>
       <div class='bg-white w-full h-52 p-2 mt-2 shadow font-light rounded-xl overflow-hidden'>
-        <div class='flex space-x-80 justify-center font-normal'>
+        <div class='flex px-16 justify-between font-normal'>
           <div class=''>Ημερομηνία</div>
           <div class=''>Ώρα</div>
-          </div>
+        </div>
+        <div class='h-52 mt-2 overflow-y-scroll'>
+          <ListItemDates />
+          <ListItemDates />
+          <ListItemDates />
+          <ListItemDates />
+          <ListItemDates />
+          <ListItemDates />
+          <ListItemDates />
+        </div>
       </div>
       <div class='mt-20 text-center'>
         <button class='bg-cyan rounded-full w-full font-light text-2xl'>Επεξεργασία Δραστηριότητας</button>

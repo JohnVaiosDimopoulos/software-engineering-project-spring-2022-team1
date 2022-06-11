@@ -4,7 +4,7 @@ import ListItemCritics from "./ListItemCritics.js";
 export default function HomePage() {
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden font-light'>
-      <div class='text-2xl flex mx-auto space-x-28  text-center justify-center'>
+      <div class='flex w-10/12 mx-auto space-x-28 text-center text-2xl '>
         <span class='bg-white w-80 p-4 rounded-3xl'>
           <div class=''>Συνολικές Δραστηριότητες</div>
           <div class=''>30</div>
@@ -16,7 +16,7 @@ export default function HomePage() {
       </div>
       <div class='bg-white px-4 h-80 mt-10 mx-auto rounded-3xl overflow-hidden'>
         <div class='text-2xl text-center'>Τελευταίες Κρατήσεις</div>
-        <div class='mx-6 mt-4 flex justify-center font-normal'>
+        <div class='mx-6 mt-4 flex justify-between font-normal'>
           <div class=''>Όνομα Δραστηριότητας</div>
           <div class='ml-4'>Ημ/νια Κράτησης</div>
           <div class='ml-4'>Ημ/νια Διεξαγωγής</div>
