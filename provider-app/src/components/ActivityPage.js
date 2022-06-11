@@ -1,9 +1,17 @@
-import ListItemDates from "./ListItemDates.js";
+import ListItemDate from "./ListItemDate.js";
+import { useNavigate } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
 
 export default function ActivityPage() {
+  const navigate = useNavigate();
+
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden'>
-      <div class='text-3xl font-light text-center'>Τίτλος Δραστηριότητας</div>
+      <button onClick={() => navigate(-1)} class='flex'>
+        <BiArrowBack class='w-6 h-6'/>
+        <div class='ml-2'>Επιστροφή στην Αναζήτηση</div>
+      </button>
+      <div class='text-3xl mt-10 font-light text-center'>Τίτλος Δραστηριότητας</div>
       <img class='w-full h-64 rounded-3xl mx-auto mt-10' src='' alt='' />
       <div class='flex mt-10 space-x-20 justify-center font-normal'>
         <div class=''>
@@ -40,13 +48,13 @@ export default function ActivityPage() {
           <div class=''>Ώρα</div>
         </div>
         <div class='h-52 mt-2 overflow-y-scroll'>
-          <ListItemDates />
-          <ListItemDates />
-          <ListItemDates />
-          <ListItemDates />
-          <ListItemDates />
-          <ListItemDates />
-          <ListItemDates />
+          <ListItemDate />
+          <ListItemDate />
+          <ListItemDate />
+          <ListItemDate />
+          <ListItemDate />
+          <ListItemDate />
+          <ListItemDate />
         </div>
       </div>
       <div class='mt-20 text-center'>

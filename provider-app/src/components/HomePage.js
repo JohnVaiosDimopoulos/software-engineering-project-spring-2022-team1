@@ -1,15 +1,15 @@
 import ListItemBooking from "./ListItemBooking.js";
-import ListItemCritics from "./ListItemCritics.js";
+import ListItemCritic from "./ListItemCritic.js";
 
 export default function HomePage() {
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden font-light'>
-      <div class='flex w-10/12 mx-auto space-x-28 text-center text-2xl '>
-        <span class='bg-white w-80 p-4 rounded-3xl'>
+      <div class='flex space-x-16 justify-center text-center text-2xl '>
+        <span class='bg-white w-96 px-2 py-6 rounded-3xl'>
           <div class=''>Συνολικές Δραστηριότητες</div>
           <div class=''>30</div>
         </span>
-        <span class='bg-white w-80 p-4 rounded-3xl'>
+        <span class='bg-white w-96 px-2 py-6 rounded-3xl'>
           <div class=''>Συνολικές Υποδομές</div>
           <div class='text-center'>10</div>
         </span>
@@ -38,9 +38,9 @@ export default function HomePage() {
       </div>
       <div class=''>
         <div class='mt-20 mb-10 text-2xl text-center'>Πρόσφατες Κριτικές</div>
-        <ListItemCritics />
-        <ListItemCritics />
-        <ListItemCritics />
+        <ListItemCritic />
+        <ListItemCritic />
+        <ListItemCritic />
       </div>
     </div>
   );
