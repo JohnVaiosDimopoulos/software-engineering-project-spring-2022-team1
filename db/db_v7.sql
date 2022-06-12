@@ -18,13 +18,13 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE "activitiesDB";
+DROP DATABASE if exists "activitiesDB";
 --
 -- TOC entry 3464 (class 1262 OID 24583)
 -- Name: activitiesDB; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE "activitiesDB" WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE = 'English_United States.1252';
+CREATE DATABASE "activitiesDB" WITH TEMPLATE = template0 ENCODING = 'UTF8';
 
 
 ALTER DATABASE "activitiesDB" OWNER TO postgres;

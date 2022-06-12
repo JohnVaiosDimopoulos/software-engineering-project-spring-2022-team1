@@ -8,14 +8,17 @@ import { Navbar } from './components/Navbar';
 function App() { 
 
   const navigate = useNavigate()
+
+  
+
   const [appContext, setAppContext] = useState({
     navigate: navigate,
-    userInfo: {
+    /* userInfo: {
       username: 'parentUser',
       userId: 16,
       balance: 126
-    },
-    //userInfo: null,
+    }, */
+    userInfo: null,
     showModal: false,
     modalContent: null,
     modalScroll: false

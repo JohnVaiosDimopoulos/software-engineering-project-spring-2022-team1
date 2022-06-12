@@ -1,4 +1,4 @@
-import React, { /* useContext */ } from "react"
+import React, { useContext } from "react"
 
 //import {TestComponent} from "@johnvaiosdimopoulos/software-engineering-project-spring-2022-team1";
 //import { AppContext } from "../AppContext";
@@ -7,10 +7,12 @@ import { fetchRebookActivities, fetchUpcomingActivities } from "../api";
 import { RecommendedActivityTile } from "../components/RecommendedActivityTile";
 import { UpcomingActivityTile } from "../components/UpcomingActivityTile";
 import { SearchResultTile } from "../components/SearchResultTile";
+import { LoginForm } from "../components/LoginForm";
+import { AppContext } from "../AppContext";
 
 export function Index() {
 
-    //const context = useContext(AppContext)
+    const context = useContext(AppContext)
 
     const activities =  [...Array(4).keys()].map((_, i) => {
 
@@ -28,6 +30,12 @@ export function Index() {
 
     return (
         <div className="w-full flex flex-col gap-3 items-center">
+            {
+                context.state.userInfo ?
+                `Welcome, ${context.state.userInfo.username}`
+                :
+                <LoginForm/>
+            }
             <ActivitiesSection
                 showBg={true}
                 title="Κλείστε Ξανά"
