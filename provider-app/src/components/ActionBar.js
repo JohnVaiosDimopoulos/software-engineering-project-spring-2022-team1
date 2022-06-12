@@ -19,7 +19,7 @@ export default function ActionBar() {
         <FiActivity class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Δραστηριότητες</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2 font-light'>
+      <button onClick={() => navigate('/facilities')} class='mt-6 w-full hover:bg-hover pt-2 font-light'>
         <FaRegBuilding class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Υποδομές</div>
       </button>

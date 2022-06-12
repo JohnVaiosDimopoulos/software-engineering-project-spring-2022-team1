@@ -6,6 +6,7 @@ import './App.css';
 import ActionBar from './components/ActionBar.js';
 import ActivityPage from './components/ActivityPage.js';
 import ActivitiesPage from './components/ActivitiesPage.js';
+import FacilitiesPage from './components/FacilitiesPage.js';
 import HomePage from "./components/HomePage";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<HomePage/>}/>
             <Route path="activities" element={<ActivitiesPage/>}/>
             <Route path="activity" element={<ActivityPage/>}/>
+            <Route path="facilities" element={<FacilitiesPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

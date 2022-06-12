@@ -5,16 +5,16 @@ export default function HomePage() {
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden font-light'>
       <div class='flex space-x-16 justify-center text-center text-2xl '>
-        <span class='bg-white w-96 px-2 py-6 rounded-3xl'>
+        <span class='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
           <div class=''>Συνολικές Δραστηριότητες</div>
           <div class=''>30</div>
         </span>
-        <span class='bg-white w-96 px-2 py-6 rounded-3xl'>
+        <span class='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
           <div class=''>Συνολικές Υποδομές</div>
           <div class='text-center'>10</div>
         </span>
       </div>
-      <div class='bg-white px-4 h-80 mt-10 mx-auto rounded-3xl overflow-hidden'>
+      <div class='bg-white px-4 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
         <div class='text-2xl text-center'>Τελευταίες Κρατήσεις</div>
         <div class='mx-6 mt-4 flex justify-between font-normal'>
           <div class=''>Όνομα Δραστηριότητας</div>
