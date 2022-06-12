@@ -35,7 +35,7 @@ export default function ActionBar() {
         <BiStats class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 px-10 mt-2'>Στατιστικά</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2 font-light'>
+      <button onClick={() => navigate('/profile')} class='mt-6 w-full hover:bg-hover pt-2 font-light'>
         <FaUserCircle class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 px-2 mt-2'>Προφίλ</div>
       </button>

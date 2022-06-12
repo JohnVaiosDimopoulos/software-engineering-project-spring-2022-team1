@@ -7,6 +7,7 @@ import ActionBar from './components/ActionBar.js';
 import ActivityPage from './components/ActivityPage.js';
 import ActivitiesPage from './components/ActivitiesPage.js';
 import FacilitiesPage from './components/FacilitiesPage.js';
+import ProfilePage from './components/ProfilePage';
 import HomePage from "./components/HomePage";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="activities" element={<ActivitiesPage/>}/>
             <Route path="activity" element={<ActivityPage/>}/>
             <Route path="facilities" element={<FacilitiesPage/>}/>
+            <Route path="profile" element={<ProfilePage/>}/>
           </Routes>
         </BrowserRouter>
       </div>
