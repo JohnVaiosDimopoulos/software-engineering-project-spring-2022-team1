@@ -7,7 +7,7 @@ export default function ActivityPage() {
 
   return (
     <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden'>
-      <button onClick={() => navigate(-1)} class='flex'>
+      <button onClick={() => navigate(-1)} class='flex hover:text-gray-500'>
         <BiArrowBack class='w-6 h-6'/>
         <div class='ml-2'>Επιστροφή στην Αναζήτηση</div>
       </button>
@@ -48,13 +48,13 @@ export default function ActivityPage() {
           <div class=''>Ώρα</div>
         </div>
         <div class='h-52 mt-2 overflow-y-scroll'>
-          <ListItemDate />
-          <ListItemDate />
-          <ListItemDate />
-          <ListItemDate />
-          <ListItemDate />
-          <ListItemDate />
-          <ListItemDate />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
+          <ListItemDate date='05/06/2022' time='12:30' />
         </div>
       </div>
       <div class='mt-20 text-center'>

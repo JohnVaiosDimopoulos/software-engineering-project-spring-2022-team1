@@ -8,14 +8,14 @@ export default function FacilitiesPage() {
         <option value="activities">Δραστηριότητες</option>
         <option value="location">Περιοχή</option>
       </select>
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
-      <ListItemFacility />
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
+      <ListItemFacility facility='Τίτλος Υποδομής' street='-' postalCode='-' location='-' activityCount='-'/>
     </div>
   );
 }

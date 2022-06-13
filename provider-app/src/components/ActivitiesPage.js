@@ -9,13 +9,13 @@ export default function ActivitiesPage() {
         <option value="date">Ημερομηνία</option>
         <option value="state">Κατάσταση</option>
       </select>
-        <ListItemActivity />
-        <ListItemActivity />
-        <ListItemActivity />
-        <ListItemActivity />
-        <ListItemActivity />
-        <ListItemActivity />
-        <ListItemActivity />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
+        <ListItemActivity activity='Τίτλος Δραστηριότητας' date='-' state='-' facility='-' bookCount='-' />
     </div>
   );
 }

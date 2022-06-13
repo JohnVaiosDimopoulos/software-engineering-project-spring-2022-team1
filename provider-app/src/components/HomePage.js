@@ -25,22 +25,22 @@ export default function HomePage() {
           <div class='ml-4'>Αριθμός Πόντων</div>
         </div>
         <div class='h-52 mt-2 overflow-y-scroll'>
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
-          <ListItemBooking />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+          <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
         </div>
       </div>
       <div class=''>
         <div class='mt-20 mb-10 text-2xl text-center'>Πρόσφατες Κριτικές</div>
-        <ListItemCritic />
-        <ListItemCritic />
-        <ListItemCritic />
+        <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
+        <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
+        <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
       </div>
     </div>
   );

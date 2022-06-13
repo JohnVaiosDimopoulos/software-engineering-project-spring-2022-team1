@@ -2,11 +2,11 @@ import { FaTrash } from 'react-icons/fa';
 
 const ListItemBankAccount = props => {
   return (
-      <button class='bg-white flex w-full mt-2 py-4 px-10 justify-between rounded-full text-gray-700 font-light shadow'>
-      <div class=''>IBAN ***125</div>
-      <div class=''>Αριθμός</div>
-      <div class=''>*****************125</div>
-      <button class=''><FaTrash/></button>
+    <button class='bg-white flex w-full mt-2 py-4 px-10 justify-between rounded-full text-gray-700 font-light shadow'>
+      <div class=''>{props.iban}</div>
+      <div class=''>{props.number}</div>
+      <div class=''>{props.cardNumber}</div>
+      <button class='mt-1'><FaTrash/></button>
     </button>
   );
 }

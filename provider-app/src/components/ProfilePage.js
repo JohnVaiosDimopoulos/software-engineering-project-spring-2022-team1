@@ -1,5 +1,4 @@
 import ListItemBankAccount from './ListItemBankAccount.js'
-import AddAccount from './AddAccount.js'
 import { BsArrowRight } from 'react-icons/bs';
 
 export default function ProfilePage() {
@@ -36,13 +35,13 @@ export default function ProfilePage() {
       
       <div class='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
       <div class='h-52 overflow-y-scroll overflow-hidden'>
-        <ListItemBankAccount selected={true}/>
-        <ListItemBankAccount />
-        <ListItemBankAccount />
-        <ListItemBankAccount />
-        <ListItemBankAccount />
+        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' selected={true}/>
+        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
       </div>
-      <div class='text-center mt-8'>
+      <div class='text-center mt-4'>
         <button class='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 text-5xl text-cyan rounded-full shadow'>+</button>
       </div>
 
