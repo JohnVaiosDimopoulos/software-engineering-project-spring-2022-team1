@@ -9,7 +9,9 @@ export default function ActionBar() {
 
   return (
     <div class='bg-cyan text-gray-700 text-center font-light w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl'>
-      <FaUserCircle class='w-36 h-36 ml-2 rounded-full'/>
+      <button onClick={() => navigate('/profile')} class='w-full'>
+        <FaUserCircle class='w-36 h-36 mx-auto rounded-full'/>
+      </button>
       <div class='mt-2'>Όνομα Παρόχου</div>
       <button onClick={() => navigate('/')} class='mt-10 w-full hover:bg-hover pt-2 font-light'>
         <AiOutlineHome class='w-12 h-12 mx-auto'/>

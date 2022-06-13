@@ -14,6 +14,8 @@ export default function FacilitiesPage() {
       <ListItemFacility />
       <ListItemFacility />
       <ListItemFacility />
+      <ListItemFacility />
+      <ListItemFacility />
     </div>
   );
 }

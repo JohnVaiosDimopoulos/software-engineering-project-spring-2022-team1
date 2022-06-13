@@ -36,7 +36,7 @@ export default function ActivityPage() {
           Αυτή είναι μία περιγραφή
         </div>
       </div>
-      <button class='bg-cyan rounded-full w-full mt-10 font-light text-2xl shadow'>Εμφάνιση Κριτικών</button>
+      <button class='bg-cyan hover:bg-hover rounded-full w-full mt-10 font-light text-2xl shadow'>Εμφάνιση Κριτικών</button>
 
       <div class='mt-10 text-xl text-center'>Σύνολο Κερδών: 2000 Πόντοι</div>
       <div class='mt-10 text-xl text-center'>Συχνότητα Διεξαγωγής:</div>
@@ -58,8 +58,8 @@ export default function ActivityPage() {
         </div>
       </div>
       <div class='mt-20 text-center'>
-        <button class='bg-cyan rounded-full w-full font-light text-2xl shadow'>Επεξεργασία Δραστηριότητας</button>
-        <button class='bg-white w-full border-2 border-red-400 my-4 rounded-full font-light text-2xl shadow'>Ακύρωση Δραστηριότητας</button>
+        <button class='bg-cyan hover:bg-hover rounded-full w-full font-light text-2xl shadow'>Επεξεργασία Δραστηριότητας</button>
+        <button class='bg-white hover:bg-red-100 w-full border-2 border-red-400 my-4 rounded-full font-light text-2xl shadow'>Ακύρωση Δραστηριότητας</button>
       </div>
     </div>
   );
