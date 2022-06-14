@@ -8,6 +8,7 @@ import ActivityPage from './components/ActivityPage.js';
 import ActivitiesPage from './components/ActivitiesPage.js';
 import FacilitiesPage from './components/FacilitiesPage.js';
 import ProfilePage from './components/ProfilePage';
+import AddActivityPage from './components/AddActivityPage.js';
 import HomePage from "./components/HomePage";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="activity" element={<ActivityPage/>}/>
             <Route path="facilities" element={<FacilitiesPage/>}/>
             <Route path="profile" element={<ProfilePage/>}/>
+            <Route path="add-activity" element={<AddActivityPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

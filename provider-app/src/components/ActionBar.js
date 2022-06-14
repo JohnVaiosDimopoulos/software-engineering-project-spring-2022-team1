@@ -25,11 +25,11 @@ export default function ActionBar() {
         <FaRegBuilding class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Υποδομές</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2 font-light'>
+      <button onClick={() => navigate('/add-activity')} class='mt-6 w-full hover:bg-hover pt-2 font-light'>
         <BiBookAdd class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Νέα Δραστηριότητα</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2 font-light'>
+      <button onClick={() => navigate('/add-facility')} class='mt-6 w-full hover:bg-hover pt-2 font-light'>
         <BiBookAdd class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Νέα Υποδομή</div>
       </button>
