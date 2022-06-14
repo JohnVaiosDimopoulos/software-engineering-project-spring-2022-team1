@@ -3,7 +3,7 @@ import ListItemCritic from "./ListItemCritic.js";
 
 export default function HomePage() {
   return (
-    <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden font-light'>
+    <div class='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
       <div class='flex space-x-16 justify-center text-center text-2xl '>
         <span class='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
           <div class=''>Συνολικές Δραστηριότητες</div>

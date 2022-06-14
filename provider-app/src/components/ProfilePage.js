@@ -3,7 +3,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 export default function ProfilePage() {
   return (
-    <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden font-light'>
+    <div class='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
       <div class='text-3xl text-center'>Στοιχεία Λογαριασμού</div>
       <div class='flex justify-between mt-8'>
         <input type='text' class='bg-gray-200 w-1/2 px-4 rounded-full shadow' id='name' placeholder='Όνομα Χρήστη'/><br/>

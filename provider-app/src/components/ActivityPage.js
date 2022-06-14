@@ -6,7 +6,7 @@ export default function ActivityPage() {
   const navigate = useNavigate();
 
   return (
-    <div class='mx-auto mt-10 px-10 w-9/12 text-gray-700 overflow-hidden'>
+    <div class='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden'>
       <button onClick={() => navigate(-1)} class='flex hover:text-gray-500'>
         <BiArrowBack class='w-6 h-6'/>
         <div class='ml-2'>Επιστροφή στην Αναζήτηση</div>
