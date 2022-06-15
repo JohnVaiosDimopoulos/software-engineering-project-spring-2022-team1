@@ -3,7 +3,7 @@ import ListItemCritic from "./ListItemCritic.js";
 
 export default function HomePage() {
   return (
-    <div class='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
+    <div class='mx-auto p-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
       <div class='flex space-x-16 justify-center text-center text-2xl '>
         <span class='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
           <div class=''>Συνολικές Δραστηριότητες</div>
@@ -14,7 +14,7 @@ export default function HomePage() {
           <div class='text-center'>10</div>
         </span>
       </div>
-      <div class='bg-white px-4 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
+      <div class='bg-white px-6 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
         <div class='text-2xl text-center'>Τελευταίες Κρατήσεις</div>
         <div class='mx-6 mt-4 flex justify-between font-normal'>
           <div class=''>Όνομα Δραστηριότητας</div>
@@ -37,7 +37,7 @@ export default function HomePage() {
         </div>
       </div>
       <div class=''>
-        <div class='mt-20 mb-10 text-2xl text-center'>Πρόσφατες Κριτικές</div>
+        <div class='mt-16 mb-6 text-2xl text-center'>Πρόσφατες Κριτικές</div>
         <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
         <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
         <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
