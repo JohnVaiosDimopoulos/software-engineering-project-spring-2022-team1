@@ -2,6 +2,14 @@ import ListItemBankAccount from './ListItemBankAccount.js'
 import { BsArrowRight } from 'react-icons/bs';
 
 export default function ProfilePage() {
+  function switchBankAccount(id){
+    for (var obj of document.getElementById('bankAccounts').children){
+      obj.style.border = '';
+    }
+    var el = document.getElementById(id);
+    el.style.border = 'thick solid #D1E8E8'
+  }
+
   return (
     <div class='mx-auto p-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
       <div class='text-3xl text-center'>Στοιχεία Λογαριασμού</div>
@@ -37,12 +45,11 @@ export default function ProfilePage() {
       <button class='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
       
       <div class='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
-      <div class='h-52 overflow-y-scroll overflow-hidden'>
-        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' selected={true}/>
-        <ListItemBankAccount iban='IBAN ***235' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***654' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***354' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***317' number='Αριθμός' cardNumber='*****************125' />
+      <div id='bankAccounts' class='h-52 overflow-y-scroll overflow-hidden'>
+        <ListItemBankAccount click={switchBankAccount} iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount click={switchBankAccount} iban='IBAN ***742' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount click={switchBankAccount} iban='IBAN ***543' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount click={switchBankAccount} iban='IBAN ***114' number='Αριθμός' cardNumber='*****************125' />
       </div>
       <div class='text-center mt-4'>
         <button class='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 text-5xl text-cyan rounded-full shadow'>+</button>

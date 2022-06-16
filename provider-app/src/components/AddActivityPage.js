@@ -50,11 +50,11 @@ export default function AddActivityPage() {
         <div class='flex space-x-4'>
           <div class='font-medium'>Ημέρες και Ώρες Διεξαγωγής:</div>
           <div>
-            <input type='radio' id='monday' class=''/>
+            <input type='radio' name='occurs' id='periodically' class=''/>
             <label for='monday'>Περιοδικά</label>
           </div>
           <div>
-            <input type='radio' id='monday' class=''/>
+            <input type='radio' name='occurs' id='selective' class=''/>
             <label for='monday'>Επιλεκτικά</label>
           </div>
         </div>
@@ -63,23 +63,23 @@ export default function AddActivityPage() {
           <div class='flex mt-2 justify-between'>
             <div class='font-medium'>Ημέρα:</div>
             <div>
-              <input type='radio' id='monday' class=''/>
+              <input type='radio' id='mon' class=''/>
               <label for='monday'>ΔΕΥ</label>
             </div>
             <div>
-              <input type='radio' id='monday' class=''/>
+              <input type='radio' id='tue' class=''/>
               <label for='monday'>ΤΡΙ</label>
             </div>
             <div>
-              <input type='radio' id='monday' class=''/>
+              <input type='radio' id='wed' class=''/>
               <label for='monday'>ΤΕΤ</label>
             </div>
             <div>
-              <input type='radio' id='monday' class=''/>
+              <input type='radio' id='thu' class=''/>
               <label for='monday'>ΠΕΜ</label>
             </div>
             <div>
-              <input type='radio' id='monday' class=''/>
+              <input type='radio' id='fri' class=''/>
               <label for='monday'>ΠΑΡ</label>
             </div>
             <div class='flex w-3/12 space-x-2'>
