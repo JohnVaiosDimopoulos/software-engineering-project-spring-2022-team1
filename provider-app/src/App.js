@@ -9,6 +9,7 @@ import ActivitiesPage from './components/ActivitiesPage.js';
 import FacilitiesPage from './components/FacilitiesPage.js';
 import ProfilePage from './components/ProfilePage';
 import AddActivityPage from './components/AddActivityPage.js';
+import StatisticsPage from "./components/StatisticsPage";
 import HomePage from "./components/HomePage";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="facilities" element={<FacilitiesPage/>}/>
             <Route path="profile" element={<ProfilePage/>}/>
             <Route path="add-activity" element={<AddActivityPage/>}/>
+            <Route path="statistics" element={<StatisticsPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

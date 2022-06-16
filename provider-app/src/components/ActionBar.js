@@ -8,7 +8,7 @@ export default function ActionBar() {
   const navigate = useNavigate();
 
   return (
-    <div class='bg-cyan text-gray-700 text-center font-light w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl'>
+    <div class='bg-cyan text-gray-700 text-center font-light w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
       <button onClick={() => navigate('/profile')} class='w-full'>
         <FaUserCircle class='w-36 h-36 mx-auto rounded-full'/>
       </button>
@@ -33,7 +33,7 @@ export default function ActionBar() {
         <BiBookAdd class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 mt-2'>Νέα Υποδομή</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2 font-light'>
+      <button onClick={() => navigate('/statistics')} class='mt-6 w-full hover:bg-hover pt-2 font-light'>
         <BiStats class='w-12 h-12 mx-auto'/>
         <div class='border-gray-300 border-b-2 px-10 mt-2'>Στατιστικά</div>
       </button>

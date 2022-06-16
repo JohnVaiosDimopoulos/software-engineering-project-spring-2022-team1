@@ -1,8 +1,16 @@
 import { FaTrash } from 'react-icons/fa';
 
+function switchSelected(id){
+  //Array.prototype.slice.call(document.querySelectorAll('')).forEach(function(element){
+  //  element.classList.remove('border-2 border-cyan');
+  //});
+  var el = document.getElementById(id);
+  el.className += 'w-full border-4 border-cyan';
+}
+
 const ListItemBankAccount = props => {
   return (
-    <button class='bg-white flex w-full mt-2 py-4 px-10 justify-between rounded-full text-gray-700 font-light shadow'>
+    <button id={props.iban} onClick={() => switchSelected(props.iban)} class='bg-white flex w-full mt-2 py-4 px-10 justify-between rounded-full text-gray-700 font-light shadow'>
       <div class=''>{props.iban}</div>
       <div class=''>{props.number}</div>
       <div class=''>{props.cardNumber}</div>

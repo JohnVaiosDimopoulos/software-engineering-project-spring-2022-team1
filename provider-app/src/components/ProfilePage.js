@@ -39,10 +39,10 @@ export default function ProfilePage() {
       <div class='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
       <div class='h-52 overflow-y-scroll overflow-hidden'>
         <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' selected={true}/>
-        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
-        <ListItemBankAccount iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***235' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***654' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***354' number='Αριθμός' cardNumber='*****************125' />
+        <ListItemBankAccount iban='IBAN ***317' number='Αριθμός' cardNumber='*****************125' />
       </div>
       <div class='text-center mt-4'>
         <button class='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 text-5xl text-cyan rounded-full shadow'>+</button>
