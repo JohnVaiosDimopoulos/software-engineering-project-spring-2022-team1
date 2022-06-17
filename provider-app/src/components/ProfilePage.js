@@ -43,7 +43,6 @@ export default function ProfilePage() {
         <input type='points' class='px-4 w-2/5 p-1 rounded-full shadow' id='text' placeholder='Αριθμός $'/>
       </div>
       <button class='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
-      
       <div class='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
       <div id='bankAccounts' class='h-52 overflow-y-scroll overflow-hidden'>
         <ListItemBankAccount click={switchBankAccount} iban='IBAN ***125' number='Αριθμός' cardNumber='*****************125' />
@@ -52,7 +51,7 @@ export default function ProfilePage() {
         <ListItemBankAccount click={switchBankAccount} iban='IBAN ***114' number='Αριθμός' cardNumber='*****************125' />
       </div>
       <div class='text-center mt-4'>
-        <button class='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 text-5xl text-cyan rounded-full shadow'>+</button>
+        <button class='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 pl-1 text-5xl text-cyan rounded-full shadow'>+</button>
       </div>
     </div>
   );

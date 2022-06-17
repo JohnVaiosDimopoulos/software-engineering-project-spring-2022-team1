@@ -17,9 +17,9 @@ function App() {
     <React.StrictMode>
       <div class='flex'>
         <BrowserRouter>
-          <ActionBar />
+          <ActionBar/>
           <Routes>
-            <Route path="/" element={<HomePage/>}/>
+            <Route exact path="/" element={<HomePage/>}/>
             <Route path="activities" element={<ActivitiesPage/>}/>
             <Route path="activity" element={<ActivityPage/>}/>
             <Route path="facilities" element={<FacilitiesPage/>}/>
