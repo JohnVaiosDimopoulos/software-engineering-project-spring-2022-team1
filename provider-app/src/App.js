@@ -20,12 +20,12 @@ function App() {
           <ActionBar/>
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
-            <Route path="activities" element={<ActivitiesPage/>}/>
-            <Route path="activity" element={<ActivityPage/>}/>
-            <Route path="facilities" element={<FacilitiesPage/>}/>
-            <Route path="profile" element={<ProfilePage/>}/>
-            <Route path="add-activity" element={<AddActivityPage/>}/>
-            <Route path="statistics" element={<StatisticsPage/>}/>
+            <Route path="/activities" element={<ActivitiesPage/>}/>
+            <Route path="/activity" element={<ActivityPage/>}/>
+            <Route path="/facilities" element={<FacilitiesPage/>}/>
+            <Route path="/profile" element={<ProfilePage/>}/>
+            <Route path="/add-activity" element={<AddActivityPage/>}/>
+            <Route path="/statistics" element={<StatisticsPage/>}/>
           </Routes>
         </BrowserRouter>
       </div>

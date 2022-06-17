@@ -9,7 +9,8 @@ import { useEffect } from 'react';
 export default function ActionBar() {
   const navigate = useNavigate();
   useEffect(() => {
-    var el = document.getElementById(window.location.pathname);
+    var id = (window.location.pathname == '/activity') ? '/activities' : window.location.pathname;
+    var el = document.getElementById(id);
     el.style.color = '#93ABB2';
   })
 
@@ -21,42 +22,42 @@ export default function ActionBar() {
   }
 
   return (
-    <div id='actionBar' class='bg-cyan text-gray-700 text-center w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
-      <button onClick={() => go('/profile')} class='w-full'>
-        <FaUserCircle class='w-36 h-36 mx-auto rounded-full'/>
+    <div id='actionBar' className='bg-cyan text-gray-700 text-center w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
+      <button onClick={() => go('/profile')} className='w-full'>
+        <FaUserCircle className='w-36 h-36 mx-auto rounded-full'/>
       </button>
-      <div class='mt-2'>Όνομα Παρόχου</div>
-      <button id='/' onClick={() => go('/')} class='mt-10 w-full hover:bg-hover pt-2'>
-        <AiOutlineHome class='w-12 h-12 mx-auto'/>
-        <div class='w-full border-gray-300 border-b-2 mt-2 text-gray-700'>Αρχική</div>
+      <div className='mt-2'>Όνομα Παρόχου</div>
+      <button id='/' onClick={() => go('/')} className='mt-10 w-full hover:bg-hover pt-2'>
+        <AiOutlineHome className='w-12 h-12 mx-auto'/>
+        <div className='w-full border-gray-300 border-b-2 mt-2 text-gray-700'>Αρχική</div>
       </button>
-      <button id='/activities' onClick={() => go('/activities')} class='mt-6 w-full hover:bg-hover pt-2'>
-        <FiActivity class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 mt-2 text-gray-700'>Δραστηριότητες</div>
+      <button id='/activities' onClick={() => go('/activities')} className='mt-6 w-full hover:bg-hover pt-2'>
+        <FiActivity className='w-12 h-12 mx-auto'/>
+        <div className='border-gray-300 border-b-2 mt-2 text-gray-700'>Δραστηριότητες</div>
       </button>
-      <button id='/facilities' onClick={() => go('/facilities')} class='mt-6 w-full hover:bg-hover pt-2'>
-        <FaRegBuilding class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 mt-2 text-gray-700'>Υποδομές</div>
+      <button id='/facilities' onClick={() => go('/facilities')} className='mt-6 w-full hover:bg-hover pt-2'>
+        <FaRegBuilding className='w-12 h-12 mx-auto'/>
+        <div className='border-gray-300 border-b-2 mt-2 text-gray-700'>Υποδομές</div>
       </button>
-      <button id='/add-activity' onClick={() => go('/add-activity')} class='mt-6 w-full hover:bg-hover pt-2'>
+      <button id='/add-activity' onClick={() => go('/add-activity')} className='mt-6 w-full hover:bg-hover pt-2'>
         <BiBookAdd class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 mt-2 text-gray-700'>Νέα Δραστηριότητα</div>
+        <div className='border-gray-300 border-b-2 mt-2 text-gray-700'>Νέα Δραστηριότητα</div>
       </button>
-      <button id='/add-facility' onClick={() => go('/add-facility')} class='mt-6 w-full hover:bg-hover pt-2'>
+      <button id='/add-facility' onClick={() => go('/add-facility')} className='mt-6 w-full hover:bg-hover pt-2'>
         <BiBookAdd class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 mt-2 text-gray-700'>Νέα Υποδομή</div>
+        <div className='border-gray-300 border-b-2 mt-2 text-gray-700'>Νέα Υποδομή</div>
       </button>
-      <button id='/statistics' onClick={() => go('/statistics')} class='mt-6 w-full hover:bg-hover pt-2'>
-        <BiStats class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 px-10 mt-2 text-gray-700'>Στατιστικά</div>
+      <button id='/statistics' onClick={() => go('/statistics')} className='mt-6 w-full hover:bg-hover pt-2'>
+        <BiStats className='w-12 h-12 mx-auto'/>
+        <div className='border-gray-300 border-b-2 px-10 mt-2 text-gray-700'>Στατιστικά</div>
       </button>
-      <button id='/profile' onClick={() => go('/profile')} class='mt-6 w-full hover:bg-hover pt-2'>
-        <FaUserCircle class='w-12 h-12 mx-auto'/>
-        <div class='border-gray-300 border-b-2 px-2 mt-2 text-gray-700'>Προφίλ</div>
+      <button id='/profile' onClick={() => go('/profile')} className='mt-6 w-full hover:bg-hover pt-2'>
+        <FaUserCircle className='w-12 h-12 mx-auto'/>
+        <div className='border-gray-300 border-b-2 px-2 mt-2 text-gray-700'>Προφίλ</div>
       </button>
-      <button class='mt-6 w-full hover:bg-hover pt-2'>
-        <BiLogOut class='w-12 h-12 mx-auto'/>
-        <div class='mt-2 text-gray-700'>Αποσύνδεση</div>
+      <button className='mt-6 w-full hover:bg-hover pt-2'>
+        <BiLogOut className='w-12 h-12 mx-auto'/>
+        <div className='mt-2 text-gray-700'>Αποσύνδεση</div>
       </button>
       </div>
   );
