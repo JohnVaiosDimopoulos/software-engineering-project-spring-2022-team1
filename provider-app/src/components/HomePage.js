@@ -1,16 +1,20 @@
 import ListItemBooking from "./ListItemBooking.js";
-import ListItemCritic from "./ListItemCritic.js";
+import ListItemReview from "./ListItemReview.js";
 import { useState, useEffect } from "react";
 import { fetchHomePageData } from './api.js'
 
 export default function HomePage() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-
+  const [bookingData, setBookingData] = useState([])
+  const [reviewData, setReviewData] = useState([])
+  
   useEffect(() => {
     fetchHomePageData( (response) => {
       if(response.ok){
         setData(response.data)
+        setBookingData(response.data.bookings)
+        setReviewData(response.data.reviews)
       }
       else{
         console.log('failed to fetch data');
@@ -23,7 +27,7 @@ export default function HomePage() {
     <div className='mx-auto p-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
       {
         loading ? 
-        <span>loading</span>
+        <span>Φορτώνει...</span>
         :
         <>
           <div className='flex space-x-16 justify-center text-center text-2xl '>
@@ -38,7 +42,7 @@ export default function HomePage() {
           </div>
           <div className='bg-white px-6 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
             <div className='text-2xl text-center'>Τελευταίες Κρατήσεις</div>
-            <div className='mx-6 mt-4 flex justify-between font-normal'>
+            <div className='px-6 mt-4 flex justify-between font-normal'>
               <div className=''>Όνομα Δραστηριότητας</div>
               <div className='ml-4'>Ημ/νια Κράτησης</div>
               <div className='ml-4'>Ημ/νια Διεξαγωγής</div>
@@ -47,22 +51,16 @@ export default function HomePage() {
               <div className='ml-4'>Αριθμός Πόντων</div>
             </div>
             <div className='h-52 mt-2 overflow-y-scroll'>
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
-              <ListItemBooking activity='Όνομα Δραστηριότητας' dateBook='05/06/2022' dateOn='05/06/2022' seats='5' user='user101' cost='3000' />
+              {
+                bookingData.map((booking, i) => <ListItemBooking key={i} data={booking} />)
+              }
             </div>
           </div>
           <div className=''>
             <div class='mt-16 mb-6 text-2xl text-center'>Πρόσφατες Κριτικές</div>
-            <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
-            <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
-            <ListItemCritic activity='Δραστηριότητα' user='Χρήστης' comment='Αυτή είναι μια κριτική' />
+              {
+                reviewData.map((review, i) => <ListItemReview key={i} data={review} />)
+              }
           </div>
         </>
       }

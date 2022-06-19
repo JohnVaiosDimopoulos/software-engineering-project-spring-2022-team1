@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 export default function ActionBar() {
   const navigate = useNavigate();
   useEffect(() => {
-    var id = (window.location.pathname == '/activity') ? '/activities' : window.location.pathname;
+    var id = (window.location.pathname === '/activity') ? '/activities' : window.location.pathname;
     var el = document.getElementById(id);
     el.style.color = '#93ABB2';
   })

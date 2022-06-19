@@ -108,13 +108,6 @@ export default function AddActivityPage() {
           <div className=''>Ώρα</div>
         </div>
         <div className='h-52 mt-2 overflow-y-scroll'>
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
-          <ListItemDate date='05/06/2022' time='12:30' />
         </div>
       </div>
       <button className='bg-cyan w-full my-10 rounded-full h-14 hover:bg-hover text-lg shadow'>Καταχώρηση Δραστηριότητας</button>
