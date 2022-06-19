@@ -5,13 +5,13 @@ import { useState, useEffect } from "react"
 export default function ActivitiesPage() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [activitiesData, setActivitiesData] = useState([])
+  const [activities, setActivities] = useState([])
   
   useEffect(() => {
     fetchActivitiesPageData( (response) => {
       if(response.ok){
         setData(response.data)
-        setActivitiesData(response.data.activities)
+        setActivities(response.data.activities)
       }
       else{
         console.log('failed to fetch data');
@@ -34,7 +34,7 @@ export default function ActivitiesPage() {
             <option value="state">Κατάσταση</option>
           </select>
           {
-            activitiesData.map((activity, i) => <ListItemActivity key={i} data={activity} />)
+            activities.map((activity, i) => <ListItemActivity key={i} data={activity} />)
           }
         </>
       }

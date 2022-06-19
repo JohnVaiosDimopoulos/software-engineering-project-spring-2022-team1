@@ -5,13 +5,13 @@ import { useState, useEffect } from "react"
 export default function FacilitiesPage() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [facilitiesData, setFacilitiesData] = useState([])
+  const [facilities, setFacilities] = useState([])
   
   useEffect(() => {
     fetchFacilitiesPageData( (response) => {
       if(response.ok){
         setData(response.data)
-        setFacilitiesData(response.data.facilities)
+        setFacilities(response.data.facilities)
       }
       else{
         console.log('failed to fetch data');
@@ -33,7 +33,7 @@ export default function FacilitiesPage() {
             <option value="location">Περιοχή</option>
           </select>
           {
-            facilitiesData.map((activity, i) => <ListItemFacility key={i} data={activity} />)
+            facilities.map((activity, i) => <ListItemFacility key={i} data={activity} />)
           }
         </>
       }

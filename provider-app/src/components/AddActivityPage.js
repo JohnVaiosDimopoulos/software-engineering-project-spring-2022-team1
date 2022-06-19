@@ -1,6 +1,12 @@
 import ListItemDate from "./ListItemDate.js";
+import { useState } from "react";
+
 
 export default function AddActivityPage() {
+  const [name, setName] = useState('')
+  const [price, setPrice] = useState('')
+  const [seats, setSeats] = useState('')
+  const [description, setDescription] = useState('')
 
   return (
     <div className='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>

@@ -44,8 +44,8 @@ export function fetchProfilePageData(callback) {
             bankAccounts: [...Array(6).keys()].map(i => {
                 return {
                     iban: `iban${i}`,
-                    number: `number${i}`,
-                    cardNumber: `cardNumber${i}`,
+                    number: `αριθμός${i}`,
+                    cardNumber: `αριμός κάρτας${i}`,
                     isSelected: false
                 }
             })
@@ -63,7 +63,7 @@ export function fetchActivitiesPageData(callback) {
                 return {
                     title: `Δραστηριότητα ${i}`,
                     date: '10/05/2022',
-                    state: 'Διαθέσιμη',
+                    state: 'διαθέσιμη',
                     facility: 'ΟΑΚΑ',
                     bookCount: '100'
                 }
@@ -79,6 +79,7 @@ export function fetchActivityPageData(activityId, callback) {
         ok:true,
         data:{
             title: 'Δραστηριότητα',
+            imgUrl: '',
             category: 'Άθληση',
             price: '1000',
             facility: 'ΟΑΚΑ',
@@ -114,6 +115,23 @@ export function fetchFacilitiesPageData(callback) {
                     postalCode: 'Διαθέσιμη',
                     location: 'Μαρούσι',
                     activityCount: '2'
+                }
+            })
+        }
+        })
+    )
+}
+
+export function fetchStatisticsPageData(callback) {
+    delay(100).then(() => 
+        callback({
+        ok:true,
+        data:{
+            popular: [...Array(6).keys()].map(i => {
+                return {
+                    title: `Δραστηριότητα ${i}`,
+                    bookCount: '10',
+                    earnings: '1000',
                 }
             })
         }

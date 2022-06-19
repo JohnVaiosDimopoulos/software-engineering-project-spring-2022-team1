@@ -35,7 +35,7 @@ export default function ActivityPage() {
             <div className='ml-2'>Επιστροφή στην Αναζήτηση</div>
           </button>
           <div className='text-3xl mt-10 text-center'>{data.title}</div>
-          <img className='w-full h-64 rounded-3xl mx-auto mt-10 shadow' src='' alt=''/>
+          <img className='w-full h-64 rounded-3xl mx-auto mt-10 shadow' src={data.imgUrl} alt=''/>
           <div className='flex mt-10 justify-between font-normal'>
             <div>
               <div className='flex'>
@@ -86,9 +86,15 @@ export default function ActivityPage() {
               {data.description}
             </div>
           </div>
-          <div className='mt-10 text-lg text-center font-normal'>Σύνολο Κερδών: {data.earnings}</div>
+          <div className='flex justify-center mt-10 text-lg'>
+            <div className='font-normal'>Σύνολο Κερδών:</div>
+            <div className='ml-1 font-light'>{data.earnings}</div>
+          </div>
           <button className='bg-cyan hover:bg-hover rounded-full w-full mt-10 font-light text-2xl shadow'>Εμφάνιση Κριτικών</button>
-          <div className='mt-10 text-lg text-center font-normal'>Συχνότητα Διεξαγωγής: {data.occurence}</div>
+          <div className='flex justify-center mt-10 text-lg'>
+            <div className='font-normal'>Συχνότητα Διεξαγωγής:</div>
+            <div className='ml-1 font-light'>{data.occurence}</div>
+          </div>
           <div className='mt-10 text-lg text-center font-normal'>Ημερομηνίες Διεξαγωγής:</div>
           <div className='bg-white w-full h-52 p-2 mt-2 font-light rounded-xl overflow-hidden shadow'>
             <div className='flex px-16 justify-between font-normal'>
