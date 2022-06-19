@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function AddFacilityPage() {
   return (
-    <div className='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-normal'>
+    <div className='overflow-hidden font-normal'>
       <div className='text-3xl text-center font-light'>Νέα Υποδομή</div>
       <div className='mt-10 w-full'>
           <div className=''>Όνομα Υπηρεσίας*</div>

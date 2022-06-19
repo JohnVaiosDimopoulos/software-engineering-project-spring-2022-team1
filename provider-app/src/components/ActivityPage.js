@@ -24,7 +24,7 @@ export default function ActivityPage() {
   }, [])
 
   return (
-    <div className='mx-auto p-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden'>
+    <div className='overflow-hidden'>
       {
         loading ? 
         <span>Φορτώνει...</span>

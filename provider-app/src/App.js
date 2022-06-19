@@ -16,9 +16,10 @@ import AddFacilityPage from "./components/AddFacilityPage.js"
 function App() {
   return (
     <React.StrictMode>
-      <div class='flex'>
+      <div className='flex text-gray-700'>
         <BrowserRouter>
           <ActionBar/>
+          <div className='mx-auto p-10 w-9/12 max-w-4xl'>
           <Routes>
             <Route exact path="/" element={<HomePage/>}/>
             <Route path="/activities" element={<ActivitiesPage/>}/>
@@ -29,6 +30,7 @@ function App() {
             <Route path="/add-facility" element={<AddFacilityPage/>}/>
             <Route path="/statistics" element={<StatisticsPage/>}/>
           </Routes>
+          </div>
         </BrowserRouter>
       </div>
     </React.StrictMode>

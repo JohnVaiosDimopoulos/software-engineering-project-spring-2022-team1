@@ -26,7 +26,7 @@ export default function AddActivityPage() {
   }
 
   return (
-    <div className='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
+    <div className='overflow-hidden font-light'>
       <div className='text-3xl text-center'>Νέα Δραστηριότητα</div>
       <div className='relative w-full mt-8'>
         <img className='w-full h-48 rounded-3xl' src='' alt=''/>
