@@ -40,9 +40,9 @@ export default function HomePage() {
               <div className='text-center'>{data.totalFacilities}</div>
             </span>
           </div>
-          <div className='bg-white px-6 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
+          <div className='bg-white px-10 h-80 mt-10 mx-auto rounded-3xl overflow-hidden shadow'>
             <div className='text-2xl text-center'>Τελευταίες Κρατήσεις</div>
-            <div className='px-6 mt-4 flex justify-between font-normal'>
+            <div className='mt-4 ml-6 flex justify-between font-normal'>
               <div className=''>Όνομα Δραστηριότητας</div>
               <div className='ml-4'>Ημ/νια Κράτησης</div>
               <div className='ml-4'>Ημ/νια Διεξαγωγής</div>

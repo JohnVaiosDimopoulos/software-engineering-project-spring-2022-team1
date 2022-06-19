@@ -1,12 +1,29 @@
 import ListItemDate from "./ListItemDate.js";
 import { useState } from "react";
+import { sendActivityData } from './api.js'
 
 
 export default function AddActivityPage() {
   const [name, setName] = useState('')
+  const [category, setCategory] = useState('')
   const [price, setPrice] = useState('')
+  const [age, setAge] = useState('')
   const [seats, setSeats] = useState('')
+  const [facility, setFacility] = useState('')
   const [description, setDescription] = useState('')
+
+  function sendNewActivityInfo(){
+    sendActivityData(
+    {
+      name: name,
+      category: category,
+      price: price,
+      age: age,
+      seats: seats,
+      facility: facility,
+      description: description
+    })
+  }
 
   return (
     <div className='mx-auto mt-10 px-10 w-9/12 max-w-4xl text-gray-700 overflow-hidden font-light'>
@@ -18,38 +35,52 @@ export default function AddActivityPage() {
       <div className='flex mt-6 mx-auto justify-between font-normal'>
         <div className='w-full'>
           <div className=''>Όνομα Υπηρεσίας*</div>
-          <input type='text' className='bg-white w-11/12 px-4 rounded-full shadow' id='name'/>
+          <input type='text' className='bg-white w-11/12 px-4 rounded-full shadow'
+            value={name} onChange={(e) => setName(e.target.value)}
+          />
         </div>
         <div className='w-full'>
           <div className=''>Κατηγορία*</div>
-          <input type='text' class='bg-white w-10/12 px-4 rounded-full shadow' id='name'/>
+          <input type='text' class='bg-white w-10/12 px-4 rounded-full shadow'
+            value={category} onChange={(e) => setCategory(e.target.value)}
+          />
         </div>
         <div className='w-full'>
           <div className=''>Τιμή*</div>
-          <input type='text' className='bg-white w-9/12 px-4 rounded-full shadow' id='name'/>
+          <input type='text' className='bg-white w-9/12 px-4 rounded-full shadow'
+            value={price} onChange={(e) => setPrice(e.target.value)}
+          />
         </div>
       </div>
       <div className='flex justify-between mt-6 font-normal'>
         <div className='w-1/2'>
           <div className=''>Ηλικιακή Κατηγορία</div>
-          <input type='text' className='bg-white w-11/12 px-4 rounded-full shadow' id='name'/>
+          <input type='text' className='bg-white w-11/12 px-4 rounded-full shadow'
+            value={age} onChange={(e) => setAge(e.target.value)}
+          />
         </div>
         <div className='w-1/3'>
           <div className=''>Αριθμός Θέσεων*</div>
-          <input type='text' className='bg-white w-10/12 px-4 rounded-full shadow' id='name'/>
+          <input type='text' className='bg-white w-10/12 px-4 rounded-full shadow'
+            value={seats} onChange={(e) => setSeats(e.target.value)}
+          />
         </div>
       </div>
       <div className='flex mt-6 justify-between font-normal'>
         <div className='w-full'>
           <div className=''>Υποδομή*</div>
-          <input type='text' className='bg-white w-1/2 px-4 rounded-full shadow' id='name'/>
+          <input type='text' className='bg-white w-1/2 px-4 rounded-full shadow'
+            value={facility} onChange={(e) => setFacility(e.target.value)}
+          />
         </div>
         <button className='bg-cyan hover:bg-hover w-1/2 h-12 rounded-full shadow'>Νέα Υποδομή</button>
       </div>
       <div className='mt-10 font-normal'>
         <div className=''>Περιγραφή*</div>
         <form>
-          <textarea className='bg-white w-full h-32 px-2 py-1 mt-2 rounded-xl font-light resize-none shadow'></textarea>
+          <textarea className='bg-white w-full h-32 px-2 py-1 mt-2 rounded-xl font-light resize-none shadow'
+            value={description} onChange={(e) => setDescription(e.target.value)}
+          />
         </form>
       </div>
       <div className='mt-10'>
@@ -116,7 +147,7 @@ export default function AddActivityPage() {
         <div className='h-52 mt-2 overflow-y-scroll'>
         </div>
       </div>
-      <button className='bg-cyan w-full my-10 rounded-full h-14 hover:bg-hover text-lg shadow'>Καταχώρηση Δραστηριότητας</button>
+      <button onClick={() => sendNewActivityInfo()} className='bg-cyan w-full my-10 rounded-full h-14 hover:bg-hover text-lg shadow'>Καταχώρηση Δραστηριότητας</button>
     </div>
   );
 }

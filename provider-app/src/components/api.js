@@ -142,3 +142,7 @@ export function fetchStatisticsPageData(callback) {
 export function sendProfileData(data) {
     console.log('Sent data: '+ data);
 }
+
+export function sendActivityData(data) {
+    console.log('Sent data: '+ data);
+}
