@@ -11,6 +11,8 @@ export default function ProfilePage() {
   const [canEdit, setCanEdit] = useState(false)
   const [username, setUsername] = useState('')
   const [pwd, setPwd] = useState('')
+  const [watermark, setWatermark] = useState('')
+  const [redeemPoints, setRedeemPoints] = useState('')
   const [email, setEmail] = useState('')
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState(-1)
@@ -59,6 +61,13 @@ export default function ProfilePage() {
     setSelectedAccount(idx)
   }
 
+  function removeBankAccount(idx){
+    setAccounts([
+      ...accounts.slice(0, idx),
+      ...accounts.slice(idx+1, accounts.length)
+    ])
+  }
+
   return (
     <div className='font-light'>
       {
@@ -99,22 +108,28 @@ export default function ProfilePage() {
           </div>
           <div className='text-2xl mt-12 text-center'>Υδατογράφημα</div>
           <div className='flex justify-between mt-6'>
-            <input type='watermark' className='px-4 w-1/2 p-1 rounded-full shadow' placeholder='Μέχρι 30 χαρακτήρες'/>
+            <input type='text' className='px-4 w-1/2 p-1 rounded-full shadow' placeholder='Μέχρι 30 χαρακτήρες'
+                value={watermark} onChange={(e) => setWatermark(e.target.value)}
+            />
             <button className='bg-cyan hover:bg-hover w-1/3 h-8 mx-auto text-lg rounded-full shadow'>Προσθήκη</button>
           </div>
           <div className='text-2xl mt-12 text-center'>Οι Πόντοι Μου</div>
           <div className='bg-white rounded-full w-96 p-1 mx-auto text-center text-3xl'>{data.totalPoints} / 3000$</div>
           <div className='text-2xl mt-12 text-center'>Εξαργύρωση Πόντων</div>
           <div className='flex justify-between mt-8'>
-            <input type='points' className='w-2/5 px-4 rounded-full shadow' placeholder='Αριθμός Πόντων'/>
+            <input type='text' className='w-2/5 px-4 rounded-full shadow' placeholder='Αριθμός Πόντων'
+                value={redeemPoints ? redeemPoints : ''} onChange={(e) => setRedeemPoints(e.target.value)}
+            />
             <BsArrowRight className='w-10 h-10'/>
-            <input type='points' className='px-4 w-2/5 p-1 rounded-full shadow' placeholder='Αριθμός $'/>
+            <input type='text' className='px-4 w-2/5 p-1 rounded-full shadow' placeholder='Αριθμός $'
+                value={redeemPoints ? parseInt(redeemPoints)/5 : ''} onChange={(e) => setRedeemPoints(parseInt(e.target.value)*5)}
+            />
           </div>
           <button className='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
           <div className='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
           <div className='h-52 overflow-y-scroll overflow-hidden'>
             {
-              accounts.map((acc, i) => <ListItemBankAccount key={i} clicked={() => switchBankAccount(i)} isSelected={i === selectedAccount} data={acc} />)
+              accounts.map((account, i) => <ListItemBankAccount key={i} clicked={() => switchBankAccount(i)} isSelected={i === selectedAccount} data={account} remove={() => removeBankAccount(i)} />)
             }
           </div>
           <div className='text-center mt-4'>

@@ -45,7 +45,7 @@ export function fetchProfilePageData(callback) {
                 return {
                     iban: `iban${i}`,
                     number: `αριθμός${i}`,
-                    cardNumber: `αριμός κάρτας${i}`,
+                    cardNumber: `αριθμός κάρτας${i}`,
                     isSelected: false
                 }
             })
@@ -145,4 +145,8 @@ export function sendProfileData(data) {
 
 export function sendActivityData(data) {
     console.log('Sent data: '+ data);
+}
+
+export function sendFacilityData(data) {
+    console.log('Sent data: '+ data.postalCode);
 }
