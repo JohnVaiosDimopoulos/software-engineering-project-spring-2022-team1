@@ -117,13 +117,19 @@ export default function ProfilePage() {
           <div className='bg-white rounded-full w-96 p-1 mx-auto text-center text-3xl'>{data.totalPoints} / 3000$</div>
           <div className='text-2xl mt-12 text-center'>Εξαργύρωση Πόντων</div>
           <div className='flex justify-between mt-8'>
-            <input type='text' className='w-2/5 px-4 rounded-full shadow' placeholder='Αριθμός Πόντων'
-                value={redeemPoints ? redeemPoints : ''} onChange={(e) => setRedeemPoints(e.target.value)}
-            />
+            <div className='flex justify-center w-2/5'>
+              <input type='text' className='w-full px-4 rounded-full shadow' placeholder='Αριθμός Πόντων'
+                  value={redeemPoints ? redeemPoints : ''} onChange={(e) => setRedeemPoints(e.target.value)}
+              />
+              <div className='ml-2 text-4xl text-gray-500'>pts</div>
+            </div>
             <BsArrowRight className='w-10 h-10'/>
-            <input type='text' className='px-4 w-2/5 p-1 rounded-full shadow' placeholder='Αριθμός $'
+            <div className='flex justify-center w-2/5'>
+              <input type='text' className='px-4 w-full p-1 rounded-full shadow' placeholder='Αριθμός €'
                 value={redeemPoints ? parseInt(redeemPoints)/5 : ''} onChange={(e) => setRedeemPoints(parseInt(e.target.value)*5)}
-            />
+              />
+              <div className='ml-2 text-4xl text-gray-500'>€</div>
+            </div>
           </div>
           <button className='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
           <div className='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>

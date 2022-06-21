@@ -21,7 +21,7 @@ export default function AddFacilityPage() {
   }
 
   return (
-    <div className='overflow-hidden font-normal'>
+    <div className='font-normal'>
       <div className='text-3xl text-center font-light'>Νέα Υποδομή</div>
       <div className='mt-10 w-full'>
           <div className=''>Όνομα Υπηρεσίας*</div>

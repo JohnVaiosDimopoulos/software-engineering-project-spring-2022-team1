@@ -1,6 +1,6 @@
 export default function AddAccount() {
   return (
-    <div className='bg-background px-6 py-4 w-9/12 rounded-3xl text-gray-700'>
+    <div className='bg-background px-6 py-4 w-9/12 rounded-3xl'>
       <div className='text-center text-2xl'>Προσθήκη Λογαριασμού</div>
       <div className='mt-6'>
         <div className=''>IBAN</div>

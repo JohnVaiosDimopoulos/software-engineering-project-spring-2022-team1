@@ -1,6 +1,6 @@
 const ListItemPopular = ({data}) => {
   return (
-    <div className='bg-cyan flex mx-auto px-10 py-4 mt-2 justify-between rounded-full text-gray-700 font-normal'>
+    <div className='bg-cyan flex px-10 py-4 mt-2 justify-between rounded-full font-normal overflow-hidden'>
       <div className='text-lg'>{data.title}</div>
       <div>
         <div className='inline'>Σύνολο Κρατήσεων:</div>

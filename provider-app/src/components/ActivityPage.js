@@ -24,7 +24,7 @@ export default function ActivityPage() {
   }, [])
 
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
       {
         loading ? 
         <span>Φορτώνει...</span>

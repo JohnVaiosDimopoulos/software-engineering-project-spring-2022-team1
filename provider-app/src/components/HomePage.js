@@ -24,18 +24,18 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className='overflow-hidden font-light'>
+    <div className='font-light'>
       {
         loading ? 
         <span>Φορτώνει...</span>
         :
         <>
-          <div className='flex space-x-16 justify-center text-center text-2xl '>
-            <span className='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
+          <div className='flex justify-between text-center text-2xl '>
+            <span className='bg-white w-5/12 px-2 py-6 rounded-3xl shadow'>
               <div className=''>Συνολικές Δραστηριότητες</div>
               <div className=''>{data.totalActivities}</div>
             </span>
-            <span className='bg-white w-96 px-2 py-6 rounded-3xl shadow'>
+            <span className='bg-white w-5/12 px-2 py-6 rounded-3xl shadow'>
               <div className=''>Συνολικές Υποδομές</div>
               <div className='text-center'>{data.totalFacilities}</div>
             </span>

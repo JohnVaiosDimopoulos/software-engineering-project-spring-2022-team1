@@ -21,7 +21,7 @@ export default function FacilitiesPage() {
   }, [])
 
   return (
-    <div className='overflow-hidden font-light'>
+    <div className='font-light'>
       {
         loading ? 
         <span>Φορτώνει...</span>

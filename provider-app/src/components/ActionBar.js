@@ -22,7 +22,7 @@ export default function ActionBar() {
   }
 
   return (
-    <div id='actionBar' className='bg-cyan text-gray-700 text-center w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
+    <div id='actionBar' className='bg-cyan text-center w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
       <button onClick={() => go('/profile')} className='w-full'>
         <FaUserCircle className='w-36 h-36 mx-auto rounded-full'/>
       </button>

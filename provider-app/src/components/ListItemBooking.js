@@ -1,6 +1,6 @@
 const ListItemBooking = ({data}) => {
   return (
-    <div className='bg-cyan flex mx-auto mt-2 px-6 justify-between rounded-full text-gray-700 font-light'>
+    <div className='bg-cyan flex mt-2 px-6 justify-between rounded-full font-light'>
       <div className='w-26'>{data.activity}</div>
       <div className='ml-4 w-24'>{data.dateBook}</div>
       <div className='ml-4 w-28'>{data.dateOn}</div>
