@@ -1,5 +1,5 @@
 import ListItemFacility from "./ListItemFacility";
-import { fetchFacilitiesPageData } from './api.js'
+import { fetchFacilitiesPageData } from '../api.js'
 import { useState, useEffect } from "react"
 
 export default function FacilitiesPage() {

@@ -1,6 +1,9 @@
 import ListItemDate from "./ListItemDate.js";
-import { useState } from "react";
-import { sendActivityData } from './api.js'
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import { sendActivityData } from '../api.js'
 
 
 export default function AddActivityPage() {
@@ -87,12 +90,12 @@ export default function AddActivityPage() {
         <div className='flex space-x-4'>
           <div className='font-medium'>Ημέρες και Ώρες Διεξαγωγής:</div>
           <div>
-            <input type='radio' name='occurs' id='periodically' className=''/>
-            <label for='monday'>Περιοδικά</label>
+            <input type='radio' name='occurs'/>
+            <label>Περιοδικά</label>
           </div>
           <div>
-            <input type='radio' name='occurs' id='selective' className=''/>
-            <label for='monday'>Επιλεκτικά</label>
+            <input type='radio' name='occurs'/>
+            <label>Επιλεκτικά</label>
           </div>
         </div>
         <div className='bg-white w-full mt-4 px-8 py-4 rounded-3xl'>
@@ -121,17 +124,17 @@ export default function AddActivityPage() {
             </div>
             <div className='flex w-3/12 space-x-2'>
               <div className='font-medium'>Ώρα</div>
-              <input type='text' className='bg-gray-200 w-1/2 px-4 rounded-full shadow' id='time'/>
+              <input type='text' className='bg-gray-200 w-1/2 px-4 rounded-full shadow'/>
             </div>
           </div>
           <div className='flex mt-4 w-full justify-center space-x-6'>
-            <div>
-              <div className='font-medium inline'>Από</div>
-              <input type='text' className='bg-gray-200 w-16 px-4 rounded-full shadow' id='from'/>
+            <div className='flex'>
+              <div className='font-medium'>Από</div>
+              <DatePicker className='bg-gray-200 w-16  ml-1 rounded-full shadow'/>
             </div>
-            <div>
-              <div class='font-medium inline'>Έως</div>
-              <input type='text' className='bg-gray-200 w-16 px-4 rounded-full shadow' id='to'/>
+            <div className='flex'>
+              <div class='font-medium'>Έως</div>
+              <DatePicker className='bg-gray-200 w-16 ml-1 rounded-full shadow'/>
             </div>
           </div>
           <div className='text-center mt-4'>

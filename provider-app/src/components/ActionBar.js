@@ -10,6 +10,7 @@ export default function ActionBar() {
   const navigate = useNavigate();
   useEffect(() => {
     var id = (window.location.pathname === '/activity') ? '/activities' : window.location.pathname;
+    id = (window.location.pathname === '/facility') ? '/facilities' : id;
     var el = document.getElementById(id);
     el.style.color = '#93ABB2';
   })

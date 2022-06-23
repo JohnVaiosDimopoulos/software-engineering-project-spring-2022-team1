@@ -1,5 +1,5 @@
 import ListItemPopular from "./ListItemPopular";
-import { fetchStatisticsPageData } from './api.js'
+import { fetchStatisticsPageData } from '../api.js'
 import { useState, useEffect } from "react"
 
 export default function StatisticsPage() {

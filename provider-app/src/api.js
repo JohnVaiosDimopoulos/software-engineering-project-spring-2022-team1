@@ -24,6 +24,7 @@ export function fetchHomePageData(callback) {
                 return {
                     activity: 'Δραστηριότητα',
                     user: 'Χρήστης',
+                    rating: '3',
                     comment: 'Αυτή είναι μια κριτική.'
                 }
             })
@@ -141,6 +142,10 @@ export function fetchStatisticsPageData(callback) {
 
 export function sendProfileData(data) {
     console.log('Sent data: '+ data);
+}
+
+export function sendWatermarkData(data) {
+    console.log('Sent data: '+ data.watermark);
 }
 
 export function sendActivityData(data) {

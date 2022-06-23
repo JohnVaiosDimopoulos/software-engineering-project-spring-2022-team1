@@ -2,7 +2,7 @@ import ListItemDate from "./ListItemDate.js";
 import { useNavigate } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
 import { useState, useEffect } from "react"
-import { fetchActivityPageData } from './api.js'
+import { fetchActivityPageData } from '../api.js'
 
 export default function ActivityPage() {
   const navigate = useNavigate();

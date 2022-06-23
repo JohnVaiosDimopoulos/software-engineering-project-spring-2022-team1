@@ -1,8 +1,8 @@
 import ListItemBankAccount from './ListItemBankAccount.js'
 import { BsArrowRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
-import { sendProfileData } from './api.js'
-import { fetchProfilePageData } from './api.js'
+import { sendProfileData } from '../api.js'
+import { fetchProfilePageData, sendWatermarkData } from '../api.js'
 
 
 export default function ProfilePage() {
@@ -55,6 +55,12 @@ export default function ProfilePage() {
     else {
       setCanEdit(true)
     }
+  }
+
+  function sendWatermark(){
+    sendWatermarkData({
+      watermark: watermark
+    })
   }
 
   function switchBankAccount(idx){
@@ -111,7 +117,7 @@ export default function ProfilePage() {
             <input type='text' className='px-4 w-1/2 p-1 rounded-full shadow' placeholder='Μέχρι 30 χαρακτήρες'
                 value={watermark} onChange={(e) => setWatermark(e.target.value)}
             />
-            <button className='bg-cyan hover:bg-hover w-1/3 h-8 mx-auto text-lg rounded-full shadow'>Προσθήκη</button>
+            <button onClick={() => sendWatermark()} className='bg-cyan hover:bg-hover w-1/3 h-8 mx-auto text-lg rounded-full shadow'>Προσθήκη</button>
           </div>
           <div className='text-2xl mt-12 text-center'>Οι Πόντοι Μου</div>
           <div className='bg-white rounded-full w-96 p-1 mx-auto text-center text-3xl'>{data.totalPoints} / 3000$</div>
@@ -121,7 +127,7 @@ export default function ProfilePage() {
               <input type='text' className='w-full px-4 rounded-full shadow' placeholder='Αριθμός Πόντων'
                   value={redeemPoints ? redeemPoints : ''} onChange={(e) => setRedeemPoints(e.target.value)}
               />
-              <div className='ml-2 text-4xl text-gray-500'>pts</div>
+              <div className='ml-2 text-3xl text-gray-500'>pts</div>
             </div>
             <BsArrowRight className='w-10 h-10'/>
             <div className='flex justify-center w-2/5'>
