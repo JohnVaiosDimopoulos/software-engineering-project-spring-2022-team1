@@ -40,7 +40,6 @@ export function fetchProfilePageData(callback) {
         data:{
             username: 'user1204153',
             email: 'user1204@mail.com',
-            password: '1234',
             totalPoints: '15890',
             bankAccounts: [...Array(6).keys()].map(i => {
                 return {
@@ -141,17 +140,32 @@ export function fetchStatisticsPageData(callback) {
 }
 
 export function sendProfileData(data) {
-    console.log('Sent data: '+ data);
+    console.log('Sent data: '+ data.username);
+    console.log('Sent data: '+ data.email);
 }
 
 export function sendWatermarkData(data) {
     console.log('Sent data: '+ data.watermark);
 }
 
+export function onRedeem(data) {
+    console.log('Sent data: '+ data.redeemPoints)
+}
+
 export function sendActivityData(data) {
-    console.log('Sent data: '+ data);
+    console.log('Sent data: '+ data.name);
+    console.log('Sent data: '+ data.category);
+    console.log('Sent data: '+ data.price);
+    console.log('Sent data: '+ data.age);
+    console.log('Sent data: '+ data.seats);
+    console.log('Sent data: '+ data.facility);
+    console.log('Sent data: '+ data.description);
 }
 
 export function sendFacilityData(data) {
+    console.log('Sent data: '+ data.name);
+    console.log('Sent data: '+ data.street);
+    console.log('Sent data: '+ data.number);
     console.log('Sent data: '+ data.postalCode);
+    console.log('Sent data: '+ data.location);
 }

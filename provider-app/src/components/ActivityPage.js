@@ -1,11 +1,9 @@
 import ListItemDate from "./ListItemDate.js";
-import { useNavigate } from 'react-router-dom';
-import { BiArrowBack } from 'react-icons/bi';
+import GoBackButton from "./GoBackButton.js";
 import { useState, useEffect } from "react"
 import { fetchActivityPageData } from '../api.js'
 
 export default function ActivityPage() {
-  const navigate = useNavigate();
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [dateData, setDateData] = useState([])
@@ -30,10 +28,7 @@ export default function ActivityPage() {
         <span>Φορτώνει...</span>
         :
         <>
-          <button onClick={() => navigate(-1)} class='flex hover:text-gray-500'>
-            <BiArrowBack className='w-6 h-6'/>
-            <div className='ml-2'>Επιστροφή στην Αναζήτηση</div>
-          </button>
+          <GoBackButton/>
           <div className='text-3xl mt-10 text-center'>{data.title}</div>
           <img className='w-full h-64 rounded-3xl mx-auto mt-10 shadow' src={data.imgUrl} alt=''/>
           <div className='flex mt-10 justify-between font-normal'>

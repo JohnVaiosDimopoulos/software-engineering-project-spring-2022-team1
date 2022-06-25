@@ -1,7 +1,7 @@
 import ListItemBankAccount from './ListItemBankAccount.js'
 import { BsArrowRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
-import { sendProfileData } from '../api.js'
+import { sendProfileData, onRedeem } from '../api.js'
 import { fetchProfilePageData, sendWatermarkData } from '../api.js'
 
 
@@ -22,7 +22,6 @@ export default function ProfilePage() {
       if(response.ok){
         setData(response.data)
         setUsername(response.data.username)
-        setPwd(response.data.password)
         setEmail(response.data.email)
         setAccounts(response.data.bankAccounts)
         for (const i in response.data.bankAccounts) {
@@ -67,6 +66,12 @@ export default function ProfilePage() {
     setSelectedAccount(idx)
   }
 
+  function redeem(){
+    onRedeem({
+      redeemPoints:redeemPoints
+    })
+  }
+
   function removeBankAccount(idx){
     setAccounts([
       ...accounts.slice(0, idx),
@@ -96,7 +101,7 @@ export default function ProfilePage() {
               />
               <div className='mt-4 font-normal'>Κωδικός</div>
               <input type='password' className={`w-11/12 h-8 px-4 rounded-full shadow ${canEdit ? 'bg-white' : 'bg-gray-200 outline-none'}`}
-                placeholder='Κωδικός' readOnly={!canEdit}
+                placeholder={canEdit ? 'Νέος Κωδικός' : 'Κωδικός'} readOnly={!canEdit}
                 value={pwd} onChange={(e) => setPwd(e.target.value)}
               />
             </div>
@@ -137,7 +142,7 @@ export default function ProfilePage() {
               <div className='ml-2 text-4xl text-gray-500'>€</div>
             </div>
           </div>
-          <button className='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
+          <button onClick={() => redeem()} className='bg-cyan hover:bg-hover w-full h-8 mt-4 mx-auto text-lg rounded-full shadow'>Εξαργύρωση</button>
           <div className='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
           <div className='h-52 overflow-y-scroll overflow-hidden'>
             {
