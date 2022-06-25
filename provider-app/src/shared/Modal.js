@@ -1,12 +1,10 @@
 import React from "react";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useToggleBodyScroll } from "./useToggleBodyScroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function CloseModalButton(props) {
     return (
         <button onClick={() => props.onClick()}>
-            <FontAwesomeIcon icon={faXmark} size="lg"/>
+            X
         </button>
     )
 }

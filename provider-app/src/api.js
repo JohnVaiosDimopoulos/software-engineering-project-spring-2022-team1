@@ -90,6 +90,14 @@ export function fetchActivityPageData(activityId, callback) {
             seats: '20',
             avgScore: '4.5',
             description: 'Αυτή είναι μία περιγραφή.',
+            reviews: [...Array(10).keys()].map(i => {
+                return {
+                    activity: '05/02/2022',
+                    user: `Χρήστης ${i}`,
+                    rating: '3/5',
+                    comment: 'Αυτή είναι μία κριτική.'
+                }
+            }),
             earnings: '12000',
             occurence: 'Περιοδικά',
             dates: [...Array(16).keys()].map(i => {

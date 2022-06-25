@@ -1,20 +1,20 @@
 export default function AddAccount() {
   return (
-    <div className='bg-background px-6 py-4 w-9/12 rounded-3xl'>
-      <div className='text-center text-2xl'>Προσθήκη Λογαριασμού</div>
+    <div className='bg-background px-10 pt-4 pb-8 rounded-3xl'>
+      <div className='text-center px-8 text-2xl'>Προσθήκη Λογαριασμού</div>
       <div className='mt-6'>
         <div className=''>IBAN</div>
-        <input type='text' className='bg-gray-200 w-full px-2 rounded-full'/>
+        <input type='text' className='w-full h-8 px-2 rounded-full shadow'/>
       </div>
       <div className='mt-4'>
         <div className=''>Αριθμός Λογαριασμού</div>
-        <input type='text' className='bg-gray-200 w-full px-2 rounded-full'/>
+        <input type='text' className='w-full h-8 px-2 rounded-full shadow'/>
       </div>
       <div className='mt-4'>
         <div className=''>Ονοματεπώνυμο Δικαιούχου</div>
-        <input type='text' className='bg-gray-200 w-full px-2 rounded-full'/>
+        <input type='text' className='w-full h-8 px-2 rounded-full shadow'/>
       </div>
-      <button className='bg-cyan mt-6 rounded-full w-full text-2xl font-light'>Προσθήκη</button>
+      <button className='bg-cyan hover:bg-hover mt-8 rounded-full w-full h-10 text-2xl font-light shadow'>Προσθήκη</button>
     </div>
   );
 }

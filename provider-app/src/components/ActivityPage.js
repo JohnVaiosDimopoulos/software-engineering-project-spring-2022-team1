@@ -1,13 +1,16 @@
 import ListItemDate from "./ListItemDate.js";
 import GoBackButton from "./GoBackButton.js";
+import AllReviews from "./AllReviews.js";
 import { useState, useEffect } from "react"
 import { fetchActivityPageData } from '../api.js'
+import { Modal } from '../shared/Modal.js';
 
 export default function ActivityPage() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [dateData, setDateData] = useState([])
-  
+  const [showReviews, setShowReviews] = useState(false)
+
   useEffect(() => {
     fetchActivityPageData(1, (response) => {
       if(response.ok){
@@ -85,7 +88,7 @@ export default function ActivityPage() {
             <div className='font-normal'>Σύνολο Κερδών:</div>
             <div className='ml-1 font-light'>{data.earnings}</div>
           </div>
-          <button className='bg-cyan hover:bg-hover rounded-full w-full mt-10 font-light text-2xl shadow'>Εμφάνιση Κριτικών</button>
+          <button onClick={() => setShowReviews(true)} className='bg-cyan hover:bg-hover rounded-full w-full mt-10 font-light text-2xl shadow'>Εμφάνιση Κριτικών</button>
           <div className='flex justify-center mt-10 text-lg'>
             <div className='font-normal'>Συχνότητα Διεξαγωγής:</div>
             <div className='ml-1 font-light'>{data.occurence}</div>
@@ -106,6 +109,7 @@ export default function ActivityPage() {
             <button className='bg-cyan hover:bg-hover rounded-full w-full font-light shadow'>Επεξεργασία Δραστηριότητας</button>
             <button className='bg-white hover:bg-red-400 hover:text-white w-full border-2 border-red-400 my-4 rounded-full font-light shadow'>Ακύρωση Δραστηριότητας</button>
           </div>
+          <Modal show={showReviews} children={<AllReviews data={data.reviews} />} color='bg-background' closeCallback={() => setShowReviews(false)} />
         </>
       }
     </div>

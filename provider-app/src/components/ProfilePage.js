@@ -1,9 +1,10 @@
-import ListItemBankAccount from './ListItemBankAccount.js'
+import ListItemBankAccount from './ListItemBankAccount.js';
+import AddAccount from './AddAccount.js';
 import { BsArrowRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
-import { sendProfileData, onRedeem } from '../api.js'
-import { fetchProfilePageData, sendWatermarkData } from '../api.js'
-
+import { sendProfileData, onRedeem } from '../api.js';
+import { fetchProfilePageData, sendWatermarkData } from '../api.js';
+import { Modal } from '../shared/Modal.js';
 
 export default function ProfilePage() {
   const [data, setData] = useState(null)
@@ -16,6 +17,7 @@ export default function ProfilePage() {
   const [email, setEmail] = useState('')
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState(-1)
+  const [showAddAccountPanel, setShowAddAccountPanel] = useState(false);
 
   useEffect(() => {
     fetchProfilePageData( (response) => {
@@ -150,8 +152,9 @@ export default function ProfilePage() {
             }
           </div>
           <div className='text-center mt-4'>
-            <button className='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 pl-1 text-5xl text-cyan rounded-full shadow'>+</button>
+            <button onClick={() => setShowAddAccountPanel(true)} className='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 pl-1 text-5xl text-cyan rounded-full shadow'>+</button>
           </div>
+          <Modal show={showAddAccountPanel} children={<AddAccount/>} color='bg-background' closeCallback={() => setShowAddAccountPanel(false)}/>
         </>
       }
     </div>
