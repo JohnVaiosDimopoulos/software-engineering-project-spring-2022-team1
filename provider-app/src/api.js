@@ -3,6 +3,17 @@ export function delay(milliseconds) {
     return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
+export function fetchActionBarData(callback) {
+    delay(100).then(() => 
+        callback({
+        ok:true,
+        data:{
+            imgUrl: ''
+        }
+        })
+    )
+}
+
 export function fetchHomePageData(callback) {
     delay(100).then(() => 
         callback({
@@ -61,6 +72,7 @@ export function fetchActivitiesPageData(callback) {
         data:{
             activities: [...Array(6).keys()].map(i => {
                 return {
+                    imgUrl: '',
                     title: `Δραστηριότητα ${i}`,
                     date: '10/05/2022',
                     state: 'διαθέσιμη',
@@ -78,8 +90,8 @@ export function fetchActivityPageData(activityId, callback) {
         callback({
         ok:true,
         data:{
-            title: 'Δραστηριότητα',
             imgUrl: '',
+            title: 'Δραστηριότητα',
             category: 'Άθληση',
             price: '1000',
             facility: 'ΟΑΚΑ',
@@ -176,4 +188,8 @@ export function sendFacilityData(data) {
     console.log('Sent data: '+ data.number);
     console.log('Sent data: '+ data.postalCode);
     console.log('Sent data: '+ data.location);
+}
+
+export function sendRemovedAccountIdx(idx) {
+    console.log('Removed bank account with id = '+ idx)
 }

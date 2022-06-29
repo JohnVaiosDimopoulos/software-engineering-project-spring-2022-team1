@@ -3,8 +3,9 @@ import AddAccount from './AddAccount.js';
 import { BsArrowRight } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { sendProfileData, onRedeem } from '../api.js';
-import { fetchProfilePageData, sendWatermarkData } from '../api.js';
+import { fetchProfilePageData, sendWatermarkData, sendRemovedAccountIdx } from '../api.js';
 import { Modal } from '../shared/Modal.js';
+import Prompt from './Prompt.js';
 
 export default function ProfilePage() {
   const [data, setData] = useState(null)
@@ -18,6 +19,10 @@ export default function ProfilePage() {
   const [accounts, setAccounts] = useState([])
   const [selectedAccount, setSelectedAccount] = useState(-1)
   const [showAddAccountPanel, setShowAddAccountPanel] = useState(false);
+  const [showPrompt, setShowPrompt] = useState(false);
+  const [promptText, setPromptText] = useState('');
+  const [promptConfirmCallback, setPromptConfirmCallback] = useState(null);
+  const [accountToRemove, setAccountToRemove] = useState(null);
 
   useEffect(() => {
     fetchProfilePageData( (response) => {
@@ -74,11 +79,18 @@ export default function ProfilePage() {
     })
   }
 
-  function removeBankAccount(idx){
+  function removeBankAccount(){
     setAccounts([
-      ...accounts.slice(0, idx),
-      ...accounts.slice(idx+1, accounts.length)
+      ...accounts.slice(0, accountToRemove),
+      ...accounts.slice(accountToRemove+1, accounts.length)
     ])
+    sendRemovedAccountIdx(accountToRemove)
+  }
+
+  function setPrompt(text, onConfirm) {
+    setPromptText(text)
+    setPromptConfirmCallback(onConfirm)
+    setShowPrompt(true);
   }
 
   return (
@@ -116,7 +128,7 @@ export default function ProfilePage() {
                   'Επεξεργασία'
                 }
               </button>
-              <button className='bg-white hover:bg-red-400 hover:text-white w-11/12 mt-8 border-2 border-red-400 rounded-full font-light text-lg shadow'>Διαγραφή Λογαριασμού</button>
+              <button onClick={() => setPrompt('Είστε σίγουρος οτι θέλετε να διαγράψετε τον λογαριασμό σας στο ParentApp;')} className='bg-white hover:bg-red-400 hover:text-white w-11/12 mt-8 border-2 border-red-400 rounded-full font-light text-lg shadow'>Διαγραφή Λογαριασμού</button>
             </div>
           </div>
           <div className='text-2xl mt-12 text-center'>Υδατογράφημα</div>
@@ -148,13 +160,14 @@ export default function ProfilePage() {
           <div className='text-2xl mt-12 text-center'>Οι Λογαριασμοί Μου</div>
           <div className='h-52 overflow-y-scroll overflow-hidden'>
             {
-              accounts.map((account, i) => <ListItemBankAccount key={i} clicked={() => switchBankAccount(i)} isSelected={i === selectedAccount} data={account} remove={() => removeBankAccount(i)} />)
+              accounts.map((account, i) => <ListItemBankAccount key={i} clicked={() => switchBankAccount(i)} isSelected={i === selectedAccount} data={account} remove={() => {setPrompt('Είστε σίγουρος οτι θέλετε να διαγράψετε τον λογαριασμό;', () => removeBankAccount()); setAccountToRemove(i)}} />)
             }
           </div>
           <div className='text-center mt-4'>
             <button onClick={() => setShowAddAccountPanel(true)} className='bg-white hover:bg-hover hover:text-white border-4 border-cyan w-16 h-16 pb-1 pl-1 text-5xl text-cyan rounded-full shadow'>+</button>
           </div>
           <Modal show={showAddAccountPanel} children={<AddAccount/>} color='bg-background' closeCallback={() => setShowAddAccountPanel(false)}/>
+          <Modal show={showPrompt} children={<Prompt text={promptText} handleConfirm={() => promptConfirmCallback} cancel={() => setShowPrompt(false)}/>} color='bg-background' closeCallback={() => setShowPrompt(false)}/>
         </>
       }
     </div>

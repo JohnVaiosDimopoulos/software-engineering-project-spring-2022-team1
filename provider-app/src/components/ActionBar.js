@@ -3,17 +3,33 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { BiBookAdd, BiStats, BiLogOut } from 'react-icons/bi';
 import { FiActivity } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-
+import { useEffect, useState } from 'react';
+import { Modal } from '../shared/Modal.js';
+import Prompt from './Prompt.js';
+import { fetchActionBarData } from '../api.js'
 
 export default function ActionBar() {
   const navigate = useNavigate();
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [showPrompt, setShowPrompt] = useState(false);
+  
   useEffect(() => {
     var id = (window.location.pathname === '/activity') ? '/activities' : window.location.pathname;
     id = (window.location.pathname === '/facility') ? '/facilities' : id;
     var el = document.getElementById(id);
     el.style.color = '#93ABB2';
+
+    fetchActionBarData( (response) => {
+      if(response.ok){
+        setData(response.data)
+      }
+      else{
+        console.log('failed to fetch data');
+      }
+      setLoading(false)
   })
+  }, [])
 
   function go(path){
     navigate(path);
@@ -22,10 +38,18 @@ export default function ActionBar() {
     }
   }
 
+  function logout(){
+  }
+
   return (
     <div id='actionBar' className='bg-cyan text-center w-44 px-2 mt-2 px-2 py-10 rounded-r-3xl shadow-lg'>
       <button onClick={() => go('/profile')} className='w-full'>
-        <FaUserCircle className='w-36 h-36 mx-auto rounded-full'/>
+        {
+          loading ? 
+          <div className='w-36 h-36 pt-14 mx-auto rounded-full'>Φορτώνει...</div>
+          :
+          <img className='w-36 h-36 mx-auto rounded-full' src={data.imgUrl} alt=''/>
+        }
       </button>
       <div className='mt-2'>Όνομα Παρόχου</div>
       <button id='/' onClick={() => go('/')} className='mt-10 w-full hover:bg-hover pt-2'>
@@ -56,10 +80,11 @@ export default function ActionBar() {
         <FaUserCircle className='w-12 h-12 mx-auto'/>
         <div className='border-gray-300 border-b-2 px-2 mt-2 text-gray-700'>Προφίλ</div>
       </button>
-      <button className='mt-6 w-full hover:bg-hover pt-2'>
+      <button onClick={() => setShowPrompt(true)} className='mt-6 w-full hover:bg-hover pt-2'>
         <BiLogOut className='w-12 h-12 mx-auto'/>
         <div className='mt-2 text-gray-700'>Αποσύνδεση</div>
       </button>
-      </div>
+      <Modal show={showPrompt} children={<Prompt text='Είστε σίγουρος οτι θέλετε να αποσυνδεθείτε;'callback={() => logout} cancel={() => setShowPrompt(false)}/>} color='bg-background' closeCallback={() => setShowPrompt(false)}/>
+    </div>
   );
 }
